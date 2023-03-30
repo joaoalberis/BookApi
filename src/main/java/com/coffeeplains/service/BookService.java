@@ -60,4 +60,8 @@ public class BookService {
     public List<BookEntity> getAllCategoria(String categoria) {
         return bookRepository.findAllByCategoriaContains(categoria);
     }
+
+    public void deleteBook(Long id) {
+        bookRepository.deleteById(id);
+    }
 }

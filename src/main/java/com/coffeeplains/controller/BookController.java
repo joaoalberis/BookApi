@@ -49,4 +49,11 @@ public class BookController {
         }
         return null;
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteBook(@PathVariable(name = "id") Long id){
+        if(bookService.existsBook(id) == true){
+            bookService.deleteBook(id);
+        }
+    }
 }
